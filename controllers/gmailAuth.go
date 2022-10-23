@@ -56,7 +56,7 @@ func CallBackFromGoogle(c *gin.Context) {
 	// client := pbEmail.NewGetAuthenticatedUserClient(conn)
 	// in := &emptypb.Empty{}
 
-	services.GetAuthenticatedUser(c, oauthConfGl, &oauthStateStringGl)
+	services.AuthenticateUser(c, oauthConfGl, &oauthStateStringGl)
 	// if err != nil {
 	// 	c.AbortWithError(http.StatusBadRequest, err)
 	// 	c.JSON(415, gin.H{"errcode": 415, "description": err.Error()})
