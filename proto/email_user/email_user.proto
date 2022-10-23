@@ -1,0 +1,29 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/S3B4SZ17/Email_service/proto/email_user";
+
+service SendEmail {
+    rpc SendEmail (EmailMessage) returns (EmailResponse) {}
+}
+
+service GetAuthenticatedUser {
+    rpc GetAuthenticatedUser (google.protobuf.Empty) returns (EmailUser) {}
+}
+
+message EmailMessage {
+    string email = 1;
+    EmailUser from = 2;
+    EmailUser to = 3;
+}
+
+message EmailUser {
+    string id = 1;
+    string email = 2;
+    bool verified_email = 3;
+    string picture = 4;
+}
+
+message EmailResponse {
+    string response = 1;
+}

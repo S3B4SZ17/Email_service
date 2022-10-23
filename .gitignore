@@ -1,0 +1,5 @@
+# Credentials for Gmail
+credentials*.json
+token*.json
+outputs*.log
+config.yml

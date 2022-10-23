@@ -1,0 +1,28 @@
+
+smtp_server:
+  emailFrom: "<YOUR_EMAIL>"
+  host_url: "smtp.gmail.com"
+  port: 587
+
+oauthStatestring: "random_string"
+
+logger-output-path: "./outputs.log"
+httpPort: 9090
+google:
+  client_id: "<YOUR_CLIENT_ID>"
+  client_secret: <YOUR_CLIENT_SECRET>
+  project_id: "<YOUR_PROJECT_ID>"
+  auth_uri: "https://accounts.google.com/o/oauth2/auth"
+  token_uri: "https://oauth2.googleapis.com/token"
+  auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+  redirect_uri: "<YOUR_CALLBACK_URL>"
+
+front_end_url: "<YOUR_FRONT_END_URL>"
+
+http_server:
+  gin_mode: release
+  http_port: "9090"
+  cors:
+    enabled: true
+    list_hosts:
+      - "<YOUR_FRONT_END_URL>"
